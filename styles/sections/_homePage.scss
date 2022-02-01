@@ -39,36 +39,74 @@
             }
         }
 
-        nav ul {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            
-            li {
-                list-style: none;
-                transition: .5s;
+        nav {
+            transition: .5s;
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 30px;
                 
-                a {
-                    @include fonts;
-                    text-decoration: none;
+                li {
+                    list-style: none;
                     transition: .5s;
-                    color: $Maincolor;
-                }
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 0px;
-                    height: 3px;
-                    background-color: $Maincolor;
-                    transition: .5s;
-                }
-                &:hover {
-                    &::after {
-                        width: 30px;
+                    
+                    a {
+                        @include fonts;
+                        text-decoration: none;
+                        transition: .5s;
+                        color: $Maincolor;
                     }
-                    transform: translateY(-5px);
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 0px;
+                        height: 3px;
+                        background-color: $Maincolor;
+                        transition: .5s;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 30px;
+                        }
+                        transform: translateY(-5px);
+                    }
+                    
                 }
-                
+            }
+        }
+        .showNavbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        .close-open {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: $Maincolor;
+            padding: 11px 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            transition: .3s; 
+            span {
+                width: 30px;
+                height: 4px;
+                background-color: $secondaryColor;
+            }
+        }
+        .close-menu {
+            gap: 0px;
+            > span:nth-child(1) {
+                transform: rotate(-45deg);
+            }            
+            > span:nth-child(2) {
+                transform: rotate(45deg);
+            }            
+            > span:nth-child(3) {
+                display: none;
             }
         }
     }
@@ -124,12 +162,7 @@
 @media(max-width: 650px) {
     .home-page {
 
-        header {
-            padding-left: 20px;
-            nav {
-                display: none;
-            }
-        }
+        
         .info-me{
             h1 {
                 width: 400px;
@@ -141,3 +174,74 @@
         }
     }
 }
+@media(max-width: 500px) {
+    .home-page {
+
+        
+            .close-open {
+                display: flex;
+            }
+        }
+        .info-me{
+            h1 {
+                width: 350px;
+                font-size: 20px;
+            }
+            > p {
+                width: 430px;
+            }
+        }
+    }
+
+
+@media(max-width: 770px) {
+    .home-page {
+
+        header {
+            padding: 0 20px;
+            nav {
+                
+                position: absolute;
+                top: -100%;
+                height: 90vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                backdrop-filter: blur(10px);
+
+                ul{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+                }
+                
+            }
+            .showNavbar {
+                position: absolute;
+                top: 10%;
+                left: 0;
+
+                ul{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+                }
+            }
+
+            .close-open {
+                display: flex;
+            }
+        }
+        .info-me{
+            > p {
+                width: 480px;
+            }
+        }
+    }
+}
+
