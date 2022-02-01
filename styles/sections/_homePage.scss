@@ -248,7 +248,26 @@
     }
 }
 
+@media(max-width: 300px) { 
+    .home-page {
+        padding: 0 15px;
 
+        .info-me{
+            h1 {
+                width: 280px;
+            }
+            > p {
+                width: 280px;
+            }
+            .hireMe {
+                a {
+                    font-size: 12px;
+                    width: 96px;
+                }
+            }
+        }
+    }
+}
 
 
 @media(max-width: 500px) {

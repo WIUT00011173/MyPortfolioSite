@@ -307,6 +307,22 @@
   }
 }
 
+@media (max-width: 300px) {
+  .home-page {
+    padding: 0 15px;
+  }
+  .home-page .info-me h1 {
+    width: 280px;
+  }
+  .home-page .info-me > p {
+    width: 280px;
+  }
+  .home-page .info-me .hireMe a {
+    font-size: 12px;
+    width: 96px;
+  }
+}
+
 @media (max-width: 500px) {
   .home-page .close-open {
     display: -webkit-box;
