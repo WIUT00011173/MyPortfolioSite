@@ -292,10 +292,14 @@
 
 @media (max-width: 360px) {
   .home-page .info-me h1 {
-    width: 340px;
+    width: 300px;
   }
   .home-page .info-me > p {
-    width: 340px;
+    width: 300px;
+  }
+  .home-page .info-me .hireMe a {
+    font-size: 12px;
+    width: 96px;
   }
 }
 
