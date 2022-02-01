@@ -318,4 +318,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
+body #preloader {
+  background: #0a0a0a url(/assets/imges/preloader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
 /*# sourceMappingURL=style.css.map */
