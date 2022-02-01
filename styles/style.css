@@ -200,7 +200,8 @@
 .home-page .info-me .hireMe a {
   -webkit-transition: .5s;
   transition: .5s;
-  width: 150px;
+  width: 160px;
+  font-size: 16px;
   text-align: center;
   padding: 10px 20px;
   background-color: transparent;
