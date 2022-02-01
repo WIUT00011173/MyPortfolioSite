@@ -290,12 +290,12 @@
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 360px) {
   .home-page .info-me h1 {
-    width: 400px;
+    width: 340px;
   }
   .home-page .info-me > p {
-    width: 400px;
+    width: 340px;
   }
 }
 
