@@ -230,6 +230,7 @@
   .home-page header nav {
     position: absolute;
     top: -100%;
+    left: 0%;
     height: 90vh;
     width: 100%;
     display: -webkit-box;
@@ -290,12 +291,31 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
+  .home-page {
+    padding: 0 15px;
+  }
   .home-page .info-me h1 {
     width: 300px;
   }
   .home-page .info-me > p {
     width: 300px;
+  }
+  .home-page .info-me .hireMe a {
+    font-size: 12px;
+    width: 96px;
+  }
+}
+
+@media (min-width: 300px) {
+  .home-page {
+    padding: 0 15px;
+  }
+  .home-page .info-me h1 {
+    width: 280px;
+  }
+  .home-page .info-me > p {
+    width: 280px;
   }
   .home-page .info-me .hireMe a {
     font-size: 12px;

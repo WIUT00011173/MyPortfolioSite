@@ -185,6 +185,7 @@
                 
                 position: absolute;
                 top: -100%;
+                left: 0%;
                 height: 90vh;
                 width: 100%;
                 display: flex;
@@ -226,9 +227,9 @@
         }
     }
 }
-@media(max-width: 360px) {
+@media(max-width: 400px) {
     .home-page {
-
+        padding: 0 15px;
 
         .info-me{
             h1 {
@@ -246,6 +247,29 @@
         }
     }
 }
+
+@media(min-width: 300px) { 
+    .home-page {
+        padding: 0 15px;
+
+        .info-me{
+            h1 {
+                width: 280px;
+            }
+            > p {
+                width: 280px;
+            }
+            .hireMe {
+                a {
+                    font-size: 12px;
+                    width: 96px;
+                }
+            }
+        }
+    }
+}
+
+
 @media(max-width: 500px) {
     .home-page {
 
