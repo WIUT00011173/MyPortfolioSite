@@ -223,21 +223,6 @@
   }
 }
 
-@media (max-width: 500px) {
-  .home-page .close-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .info-me h1 {
-    width: 350px;
-    font-size: 20px;
-  }
-  .info-me > p {
-    width: 430px;
-  }
-}
-
 @media (max-width: 770px) {
   .home-page header {
     padding: 0 20px;
@@ -302,6 +287,30 @@
   }
   .home-page .info-me > p {
     width: 480px;
+  }
+}
+
+@media (max-width: 300px) {
+  .home-page .info-me h1 {
+    width: 400px;
+  }
+  .home-page .info-me > p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-page .close-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .info-me h1 {
+    width: 350px;
+    font-size: 20px;
+  }
+  .info-me > p {
+    width: 430px;
   }
 }
 
