@@ -1,0 +1,143 @@
+.home-page {
+    @import "./variablesMixins";
+    
+    &::before {
+        content: '';
+        background-image: url(/assets/imges/myPhoto.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 42% 75%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+    header {
+        background-color: transparent;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+
+        .fayzDev {
+            font-family: 'Short Stack', cursive;
+            font-size: 25px;
+            font-weight: 700;
+            color: black;
+
+            > span:last-child {
+                color: $Maincolor;
+            }
+
+            > span:first-child {
+                color: white;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            
+            li {
+                list-style: none;
+                transition: .5s;
+                
+                a {
+                    @include fonts;
+                    text-decoration: none;
+                    transition: .5s;
+                    color: $Maincolor;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0px;
+                    height: 3px;
+                    background-color: $Maincolor;
+                    transition: .5s;
+                }
+                &:hover {
+                    &::after {
+                        width: 30px;
+                    }
+                    transform: translateY(-5px);
+                }
+                
+            }
+        }
+    }
+
+    .info-me {
+        height: calc(100vh - 80px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        h1 {
+            @include fonts;
+            font-size: 40px;
+            text-transform: uppercase;
+            width: 580px;
+            text-align: center;
+            color: $Maincolor
+        }
+
+        > p {
+            @include fonts;
+            width: 800px;
+            text-align: center;
+            color: $Maincolor;
+        }
+
+        .hireMe {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            
+            a {
+                transition: .5s;
+                width: 150px;
+                text-align: center;
+                padding: 10px 20px;
+                background-color: transparent;
+                border: 1px solid $Maincolor;
+                color: $Maincolor;
+
+                &:hover {
+                    background-color: $Maincolor;
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 650px) {
+    .home-page {
+
+        header {
+            padding-left: 20px;
+            nav {
+                display: none;
+            }
+        }
+        .info-me{
+            h1 {
+                width: 400px;
+                font-size: 25px;
+            }
+            > p {
+                width: 480px;
+            }
+        }
+    }
+}

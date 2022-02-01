@@ -1,1 +1,181 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.home-page::before {
+  content: '';
+  background-image: url(/assets/imges/myPhoto.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 42% 75%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.home-page header {
+  background-color: transparent;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 100px;
+}
+
+.home-page header .fayzDev {
+  font-family: 'Short Stack', cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+}
+
+.home-page header .fayzDev > span:last-child {
+  color: #d3c1c1;
+}
+
+.home-page header .fayzDev > span:first-child {
+  color: white;
+}
+
+.home-page header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.home-page header nav ul li {
+  list-style: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.home-page header nav ul li a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #d3c1c1;
+}
+
+.home-page header nav ul li::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: #d3c1c1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.home-page header nav ul li:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.home-page header nav ul li:hover::after {
+  width: 30px;
+}
+
+.home-page .info-me {
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+
+.home-page .info-me h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 580px;
+  text-align: center;
+  color: #d3c1c1;
+}
+
+.home-page .info-me > p {
+  font-family: 'Poppins', sans-serif;
+  width: 800px;
+  text-align: center;
+  color: #d3c1c1;
+}
+
+.home-page .info-me .hireMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.home-page .info-me .hireMe a {
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 150px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #d3c1c1;
+  color: #d3c1c1;
+}
+
+.home-page .info-me .hireMe a:hover {
+  background-color: #d3c1c1;
+  color: #4b4444;
+}
+
+@media (max-width: 650px) {
+  .home-page header {
+    padding-left: 20px;
+  }
+  .home-page header nav {
+    display: none;
+  }
+  .home-page .info-me h1 {
+    width: 400px;
+    font-size: 25px;
+  }
+  .home-page .info-me > p {
+    width: 480px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
