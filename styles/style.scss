@@ -1,4 +1,5 @@
 @import "./sections/homePage";
+@import "./sections/about";
 @import "./sections/variablesMixins";
 
 * {
@@ -8,6 +9,10 @@
 
 a {
     text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

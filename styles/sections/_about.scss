@@ -1,0 +1,290 @@
+.about {
+    @import "./variablesMixins";    
+    height: 100%;
+    width: 100%;
+    background: url("/assets/imges/bg-gif.gif");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    gap: 50px;
+    
+
+    > .myPic {
+        width: 130px;
+        overflow: hidden;
+        img {
+            border-radius: 50%;
+            transition: .5s;
+            width: 130px;
+
+            &:hover {
+                transform: scale(1.5)
+            }
+    } 
+        
+       
+    }
+
+    > h1 {
+        @include fonts;
+        text-align: center;
+        font-size: 40px;
+        color: $Maincolor;
+        text-transform: uppercase;
+        
+        span {
+            color: $secondaryColor;
+        }
+    }
+
+    .edu-and-skills {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        .info-aboutme {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-end;
+
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                a {
+
+                    > .tg-icon {
+                        padding: 5px;
+                        height: 40px;
+                        width: 50px;
+                        transition: .5s;
+                        background: $secondaryColor;
+                        overflow: hidden;
+                    }
+                    
+
+                    .tg-icon:hover{
+                        background: $Maincolor;
+                    }
+                }
+            }
+        }
+
+        .text {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            width: 600px;
+
+            > h1 {
+                @include fonts;
+                color: $secondaryColor;
+            }
+
+            > p {
+                @include fonts;
+                color: $Maincolor;
+                padding-left: 15px;
+                border-left: 3px solid $Maincolor;
+            }
+        }
+        .edu {
+            height: 335px;
+            display: flex;
+            gap: 15px;
+
+            .letters {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+
+                span {
+                    @include fonts;
+                    color: $Maincolor;
+                    font-size: 20px;
+
+                }
+
+                > span:nth-child(even) {
+                    color: $secondaryColor;
+                }
+            }
+            figure {
+                height: 100%;
+                overflow: hidden;
+                display: inline-block;
+                border: 1px dotted $Maincolor;
+                margin-bottom: 100px; /* adjust as needed */
+                transition: .5s;
+
+                .wiut {
+                    position: relative;
+                    width: 100%;
+
+                    image {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    .overlay > * {
+                        transform: translateY(80px);
+                        transition: transform .7s;
+                    }
+
+                    .overlay:hover > * {
+                        transform: translateY(0);
+                    }
+                    
+                    .overlay {
+                        transition: .5s;
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        color: $Maincolor;
+                        @include fonts;
+                        background: rgba($color: #000000, $alpha: 0.6);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        align-items: center;
+                        justify-content: center;
+                        backdrop-filter: blur(5px);
+
+                        > span {
+                            font-size: 30px;
+                        }
+
+                        > p {
+                            text-align: center;
+                            width: 280px;
+                        }
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                     
+                }
+            }
+
+            figure img {
+                transition: .3s;
+                vertical-align: top;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            
+            figure figcaption {
+                padding: 10px;
+                border: 1px dotted $Maincolor;
+                border-bottom: none;
+                text-align: center;
+                color: $Maincolor;
+                @include fonts;
+            }
+            
+            figure figcaption span{
+                font-family: 'Montserrat Alternates', sans-serif;;
+                font-size: 15px;
+                margin-bottom: 15px;
+                color: $secondaryColor;
+            }
+            
+        }
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .edu-and-skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 100px;
+
+        .info-aboutme {
+            align-self: center;
+            .social-links {
+                align-self: center;
+            }
+        }
+        .edu {
+            align-self: center;
+        }
+    }
+}
+
+
+@media(max-width: 650px) {
+    .info-aboutme {
+        .text {
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+            
+            p {
+                align-self: center;
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+
+    .about {
+        > h1 {
+            width: 60%;
+        }
+    }
+    .info-aboutme {
+
+        .text {
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+            
+            p {
+                align-self: center;
+                width: 60%;
+            }
+        }
+    }
+    .edu {
+        .wiut {
+            image {
+                width: 200px;
+            }
+        }
+        width: 400px;
+    }
+}

@@ -142,18 +142,29 @@
             gap: 30px;
             
             a {
+                position: relative;
                 transition: .5s;
                 width: 160px;
-                font-size: 16px;
+                font-size: 18px;
                 text-align: center;
                 padding: 10px 20px;
                 background-color: transparent;
                 border: 1px solid $Maincolor;
                 color: $Maincolor;
 
+                overflow: hidden;
+
+                &::before {
+                    @include hover;
+                }
+
+                &:hover::before {
+                    border-radius: 0%;
+                    width: 200%;
+                }
                 &:hover {
-                    background-color: $Maincolor;
                     color: $secondaryColor;
+
                 }
             }
         }
