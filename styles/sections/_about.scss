@@ -201,7 +201,7 @@
             figure figcaption span{
                 font-family: 'Montserrat Alternates', sans-serif;;
                 font-size: 15px;
-                margin-bottom: 15px;
+                // padding-bottom: 15px;
                 color: $Maincolor;
             }
             
@@ -288,5 +288,41 @@
             }
         }
         width: 400px;
+    }
+}
+
+
+@media(max-width: 444px) {
+
+    .about {
+        > h1 {
+            width: 60%;
+            font-size: 25px;
+        }
+    }
+    .info-aboutme {
+
+        
+
+        .text {
+            flex-direction: column;
+            align-items: center;
+
+
+            h1 {
+                font-size: 20px;
+                width: 100%;
+                text-align: center;
+            }
+            
+            p {
+                align-self: center;
+                width: 50%;
+                font-size: 15px;
+            }
+        }
+    }
+    .edu {
+        width: 350px;
     }
 }

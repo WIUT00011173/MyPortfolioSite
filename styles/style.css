@@ -1,3 +1,7 @@
+.home-page {
+  height: 100vh;
+}
+
 .home-page::before {
   content: '';
   background-image: url(/assets/imges/myPhoto.jpg);
@@ -16,6 +20,9 @@
 }
 
 .home-page header {
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: transparent;
   height: 80px;
   display: -webkit-box;
@@ -28,6 +35,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 100px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .home-page header .fayzDev {
@@ -625,7 +634,6 @@
 .about .edu-and-skills .edu figure figcaption span {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 15px;
-  margin-bottom: 15px;
   color: #d3c1c1;
 }
 
@@ -730,6 +738,37 @@
   }
 }
 
+@media (max-width: 444px) {
+  .about > h1 {
+    width: 60%;
+    font-size: 25px;
+  }
+  .info-aboutme .text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-aboutme .text h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .info-aboutme .text p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 50%;
+    font-size: 15px;
+  }
+  .edu {
+    width: 350px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -746,6 +785,8 @@ html {
 body {
   width: 100%;
   height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body #preloader {

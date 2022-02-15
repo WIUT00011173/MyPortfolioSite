@@ -1,5 +1,6 @@
 .home-page {
     @import "./variablesMixins";
+    height: 100vh;
     
     &::before {
         content: '';
@@ -17,12 +18,16 @@
         filter: brightness(30%);
     }
     header {
+        top: 0;
+        left: 0;
+        right: 0;
         background-color: transparent;
         height: 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0 100px;
+        transition: .5s;
 
         .fayzDev {
             font-family: 'Short Stack', cursive;
@@ -109,6 +114,7 @@
                 display: none;
             }
         }
+        
     }
 
     .info-me {
